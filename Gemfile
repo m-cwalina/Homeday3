@@ -54,3 +54,14 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'simple_form', github: 'heartcombo/simple_form'
+
+#A gem to make addresses into longitude and latitude
+gem "geocoder"
+
+#A gem to find distances between two points
+gem 'geokit-rails'
+
+#A gem to use a date picker
+gem 'date_wrapper'

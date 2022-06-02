@@ -1,0 +1,8 @@
+<div class="container">
+<%= simple_form_for [ @seller, @appointment ] do |f| %>
+    <%= f.input :address, label: 'Address', error: 'Address is mandatory'%>
+    <%= f.date_field :date, min: Date.tomorrow + 1, label: "Date", error: 'You gotta pick a date' %>
+    <%= f.input :timeslot, collection: Appointment::TIMESLOT, prompt: "Timeslot:", input_html: { class: 'special'}, label: "Time" %>
+    <%= f.submit "Submit appointment", class: "btn btn-primary" %>
+<% end %>
+</div>

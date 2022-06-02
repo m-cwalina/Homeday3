@@ -1,0 +1,7 @@
+<div class="container">
+  <%= simple_form_for @seller do |f| %>
+    <%= f.input :name, label: 'Name', error: 'Name is mandatory, please specify one' %>
+    <%= f.input :phone, label: 'Phone Number', error: 'Phone number is mandatory, please specify one'%>
+    <%= f.submit "Submit appointment", class: "btn btn-primary" %>
+  <% end %>
+</div>
