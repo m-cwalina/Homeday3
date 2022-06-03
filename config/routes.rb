@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   resources :sellers do
     resources :appointments
   end
+
+  resources :realtors do
+    resources :appointments
+  end
 end
