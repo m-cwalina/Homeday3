@@ -2,6 +2,14 @@
   <%= simple_form_for @seller do |f| %>
     <%= f.input :name, label: 'Name', error: 'Name is mandatory, please specify one' %>
     <%= f.input :phone, label: 'Phone Number', error: 'Phone number is mandatory, please specify one'%>
-    <%= f.submit "Submit appointment", class: "btn btn-primary" %>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<div class="container">
+  <% if @seller.errors.any? %>
+    <% @seller.errors.full_messages.each do |message| %>
+      <h1><%= message %></h1>
+    <% end %>
   <% end %>
 </div>

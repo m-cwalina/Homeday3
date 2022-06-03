@@ -1,2 +1,6 @@
-<h1><%= @seller.name %></h1>
-<%= link_to 'Create Appointment', new_seller_appointment_path(@seller) %>
+<div class="container">
+  <h1>Hi <%= @seller.name %>.</h1>
+  <%= link_to new_seller_appointment_path(@seller) do %>
+    <div type="button" class="btn btn-primary">Create an appointment</div>
+  <% end %>
+</div>

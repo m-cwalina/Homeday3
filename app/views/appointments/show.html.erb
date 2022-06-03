@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Appointment Confirmation</h1>
+  <p><%= @appointment.seller.name%></p>
+  <p><%= @appointment.seller.phone%></p>
+  <p><%= @appointment.date%></p>
+  <p><%= @appointment.timeslot%></p>
+
+  <h1> Your new realtor </h1>
+  <p><%= @appointment.realtor.name %></p>
+  <%=link_to root_path do %>
+    <div type="button" class="btn btn-primary">Home</div>
+  <% end %>
+</div>

@@ -6,3 +6,11 @@
     <%= f.submit "Submit appointment", class: "btn btn-primary" %>
 <% end %>
 </div>
+
+<div class="container">
+  <% if @appointment.errors.any? %>
+    <% @appointment.errors.full_messages.each do |message| %>
+      <h1><%= message %></h1>
+    <% end %>
+  <% end %>
+</div>

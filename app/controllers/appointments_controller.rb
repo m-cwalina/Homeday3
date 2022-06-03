@@ -8,19 +8,18 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new(appointment_params)
     @seller = Seller.find(params[:seller_id])
     @appointment.seller = @seller
-    debugger
     @appointment.save
     @realtor = Realtor.within(20, :units => :kms, :origin => [@appointment.latitude, @appointment.longitude]).first
     @appointment.realtor = @realtor
     if @appointment.save
-      redirect_to appointment_path(@appointment), notice: 'Appointment was successfully created.'
+      redirect_to seller_appointment_path(@appointment, @seller), notice: 'Appointment was successfully created.'
     else
       render :new
     end
   end
 
   def show
-    @appointment = Appointment.find(params[:id])
+    @appointment = Appointment.find(params[:seller_id])
   end
 
   private

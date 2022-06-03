@@ -1,8 +1,6 @@
 class Appointment < ApplicationRecord
   belongs_to :realtor
   belongs_to :seller
-  validates :name, presence: true
-  validates :phone, presence: true
   validates :address, presence: true
   validates :date, presence: true
   validate :date_is_not_weekend
@@ -18,7 +16,7 @@ class Appointment < ApplicationRecord
 
   def date_is_not_weekend
     if date.present? && date.wday == 6 || date.wday == 0
-      errors.add(:date, "can't be on a weekend")
+      errors.add(:date, "can't be on a weekend. Our Homies are available Monday-Friday")
     end
   end
 
