@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Your past appointments</h1>
+  <%if @realtor.appointments.where(:date => 1.month.ago.beginning_of_month..1.month.ago.end_of_month).any?  %>
+  <%@realtor.appointments.where(:date => 1.month.ago.beginning_of_month..1.month.ago.end_of_month).each do |appointment|%>
+  <h3><%=appointment.seller.name %></h3>
+  <h3><%=appointment.date  %></h3>
+  <h3><%=appointment.timeslot %></h3>
+  <% end %>
+  <% else %>
+  <h2>You have no appointments from last month</h2>
+  <% end %>
+</div>

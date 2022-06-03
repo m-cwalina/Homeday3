@@ -22,6 +22,14 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.find(params[:seller_id])
   end
 
+  def past
+    @realtor = Realtor.find(params[:realtor_id])
+  end
+
+  def future
+    @realtor = Realtor.find(params[:realtor_id])
+  end
+
   private
 
   def appointment_params
