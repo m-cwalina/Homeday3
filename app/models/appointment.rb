@@ -3,7 +3,7 @@ class Appointment < ApplicationRecord
   belongs_to :seller
   validates :address, presence: true
   validates :date, presence: true
-  validate :date_is_not_weekend
+  validates :date_is_not_weekend
   validates :timeslot, presence: true
   belongs_to :realtor
   geocoded_by :address
@@ -15,7 +15,7 @@ class Appointment < ApplicationRecord
                    :lng_column_name => :longitude
 
   def date_is_not_weekend
-    if date.present? && date.wday == 6 || date.wday == 0
+    if date.nil? && date.wday == 6 || date.wday == 0
       errors.add(:date, "can't be on a weekend. Our Homies are available Monday-Friday")
     end
   end
