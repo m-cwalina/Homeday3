@@ -15,8 +15,10 @@ class Appointment < ApplicationRecord
                    :lng_column_name => :longitude
 
   def date_is_not_weekend
-    if date.present? && date.wday == 6 || date.wday == 0
-      errors.add(:date, "can't be on a weekend. Our Homies are available Monday-Friday")
+    if date.nil?
+      errors.add(:date, 'must be added to appointment')
+    elsif date.present? && date.wday == 6 || date.wday == 0
+      errors.add(:date, "can't be on a weekend. Our Realtors are available Monday-Friday")
     end
   end
 
