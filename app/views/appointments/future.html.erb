@@ -1,5 +1,7 @@
-<div class="container">
+<div class="title-container">
   <h1>Your future appointments</h1>
+</div>
+<div class="appointments-container">
   <%if @future_appointments.any?  %>
     <%@future_appointments.each do |future_appointment|%>
     <h3><%=future_appointment.seller.name %></h3>

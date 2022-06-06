@@ -1,13 +1,15 @@
-<div class="container">
+<div class="title-confirmation-container">
   <h1>Appointment Confirmation</h1>
-  <p><%= @appointment.seller.name%></p>
-  <p><%= @appointment.seller.phone%></p>
-  <p><%= @appointment.date%></p>
-  <p><%= @appointment.timeslot%></p>
-
+</div>
+<div class="appointments-container">
+  <h3><%= @appointment.seller.name%></h3>
+  <h3><%= @appointment.seller.phone%></h3>
+  <h3><%= @appointment.date%></h3>
+  <h3><%= @appointment.timeslot%></h3>
+</div>
+<div class="title-confirmation-container">
   <h1> Your new realtor </h1>
-  <p><%= @appointment.realtor.name %></p>
-  <%=link_to root_path do %>
-    <div type="button" class="btn btn-primary">Home</div>
-  <% end %>
+</div>
+<div class="appointments-container">
+  <h3><%= @appointment.realtor.name %></h3>
 </div>

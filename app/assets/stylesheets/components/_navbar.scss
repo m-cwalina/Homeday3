@@ -1,0 +1,32 @@
+.navbar {
+  justify-content: space-between;
+  background: #141a1e;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+.navbar .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar .navbar-brand img {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 70px;
+}
+
+.navbar .container-fluid {
+  height: 80px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: bold;
+}

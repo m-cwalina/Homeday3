@@ -27,8 +27,8 @@ class AppointmentsController < ApplicationController
   end
 
   def future
-    @realtor_appointment = Realtor.find(params[:realtor_id])
-    @future_appointments = Realtor.find(params[:realtor_id]).appointments.where(:date  => Time.now.beginning_of_month + 1.month..Time.now.beginning_of_month + 2.month - 1.day).by_distance(:origin => [@realtor_appointment.latitude, @realtor_appointment.longitude])
+    @realtor = Realtor.find(params[:realtor_id])
+    @future_appointments = Realtor.find(params[:realtor_id]).appointments.where(:date  => Time.now.beginning_of_month + 1.month..Time.now.beginning_of_month + 2.month - 1.day).by_distance(:origin => [@realtor.latitude, @realtor.longitude])
   end
 
   private

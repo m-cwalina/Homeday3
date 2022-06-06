@@ -1,18 +1,16 @@
-<div class="container">
-  <h1>Pick your name</h1>
-    <% @realtors.each do |realtor| %>
-    <h3><%= realtor.name  %></h3>
-    <%= link_to past_realtor_appointments_path(realtor) do %>
-      <div type="button" class="btn btn-primary">Past Appointments</div>
-    <%end %>
-    <%= link_to future_realtor_appointments_path(realtor) do %>
-      <div type="button" class="btn btn-primary">Future Appointments</div>
-    <% end %>
-  <% end %>
+<div class="title-container">
+  <h1>PICK YOUR NAME</h1>
 </div>
-
-<div class="container">
-  <%=link_to root_path do %>
-    <div type="button" class="btn btn-primary">Home</div>
+<div class="realtors-container">
+  <% @realtors.each do |realtor| %>
+    <h3><%= realtor.name  %></h3>
+    <div class="realtors-button-container">
+      <%= link_to past_realtor_appointments_path(realtor) do %>
+        <div type="button" class="btn btn-primary">Past Appointments</div>
+      <%end %>
+      <%= link_to future_realtor_appointments_path(realtor) do %>
+        <div type="button" class="btn btn-primary">Future Appointments</div>
+      <% end %>
+    </div>
   <% end %>
 </div>
