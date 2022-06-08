@@ -5,4 +5,4 @@ application up and running.
 
 Things you may want to cover:
 
-* to deploy run bundle install, rails db:seed and use Localhost:3000
+* to deploy run git clone, bundle install, rails db:create, rails db:migrate, rails db:seed and rails server to run a Localhost:3000
