@@ -5,4 +5,4 @@ application up and running.
 
 Things you may want to cover:
 
-* to deploy run bundle install and use Localhost:3000
+* to deploy run bundle install, rails db:seed and use Localhost:3000
