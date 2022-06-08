@@ -5,4 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
-* to deploy run git clone, bundle install, rails db:create, rails db:migrate, rails db:seed and rails server to run a Localhost:3000
+* to deploy
+* git clone the file
+* bundle install - to install all dependencies 
+* rails db:create, rails db:migrate - to create and migrate the schema
+* rails db:seed  - to seed all info about Realtors
+* rails server - to run a Localhost:3000
